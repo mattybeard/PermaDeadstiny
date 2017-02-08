@@ -1,0 +1,17 @@
+﻿@model PermaDeadstiny.BLL.PermaResults
+
+@{
+    ViewBag.Title = "Results";
+}
+<h2>@Model.Details.CharacterIds.Count() total characters found</h2>
+
+@if (Model.MaxPermaLevel == 0)
+{
+    <p>You have no qualified PermaDeadstiny characters</p>
+}
+else
+{
+    <p>You have a qualifing PermaDeadstiny character!</p>
+    <p>Level: @Model.MaxPermaLevel</p>
+    <p>Light: @Model.MaxPermaLight</p>
+}
